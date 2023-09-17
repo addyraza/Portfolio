@@ -15,11 +15,12 @@
   </head>
   <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="left">
-             <a href="portfolio"><img src="./assets/Shad.jpeg" alt="image" style="height: 3rem; width: 3rem; border-radius: 50%;"> </a>
-                <a href="portfolio">My Portfolio</a>
+             <a href="#navbar"><img src="./assets/Shad.jpeg" alt="image" style="height: 3rem; width: 3rem; border-radius: 50%;"></a>
+                <a href="#navbar">My Portfolio</a>
             </div>
+            <i class="bx bx-menu" id="menu-icon"></i>
             <div class="right">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -30,22 +31,131 @@
             </div>
         </nav>
     </header>
+
+<!-- -----------------------Home Section-------------------------- -->
+
     <section class="home" id="home">
       <div class="home-content">
           Hello, It's me
-          <h1><span> Shadab Ali </span> </h1>
+          <h1><span style="color: rgb(0, 195, 255); font-weight: bold; font-size: 4rem;"> Shadab Ali </span> </h1>
           <h2>I am a Full Stack Web Developer</h2>
-          <div class="social-media">
-          <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
-          <a href="https://twitter.com/home"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.instagram.com/"><i class="bx bxl-instagram-alt"></i></a>
-          <a href="https://www.linkedin.com/in/shadab-raza-948551220/"><i class="bx bxl-linkedin"></i></a>
-        </div>
       </div>
       <div class="home-image">
           <img src="./assets/Shad.jpeg" alt="image" style="height: 25rem; width: 20rem; border-radius: 2rem;
           ">
       </div>
     </section>
+
+<!-- --------------------------About Section------------------------ -->
+
+    <section class="about" id="about">
+      <div class="about-image">
+        <img src="./assets/about.png" alt="about" class="img">
+      </div>
+      <div class="about-content">
+        <h1 style="color: blueviolet; font-size: 3rem;">About Me</h1>
+        <p class="about-me">Strong in design and integration with intuitive problem-solving skills. Proficient in HTML, CSS, JavaScript, React.js, Redux, Hooks, JAVA and MySQL. Passionate about implementing and launching new projects. Ability to translate business requirements into technical solutions. Looking to start the career as an entry-level software engineer with a reputed firm driven by technology.
+        </p>
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span> <br> Designing Web/App Interfaces </li>
+            <li><span>Web Development</span> <br> Web/App Development </li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2020</span> <br> B.Sc (Mathemetics) </li>
+            <li><span>2015</span> <br> Intermediate (12th) </li>
+            <li><span>2013</span> <br> Highschool (10th) </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<!-- ------------------------Project Section----------------------------- -->
+
+    <section class="projects" id="projects">
+      <h1 style="color: blueviolet; font-size: 3rem; margin-left: 6rem;">My Project</h1>
+      <div class="projects-container">
+        <div class="projects-card">
+          <div class="projects-card-image">
+            <img src="/assets/work-1.png" alt="work-1">
+          </div>
+            <div class="layer">
+              <h3>Calculator App</h3>
+              <p>
+                This is a simple calculator app that can be used to calculate the sum, difference, product and quotient of two numbers.
+              </p>
+              <a href="https://github.com/addyraza/Calculator"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+        <div class="projects-card">
+          <div class="projects-card-image">
+            <img src="/assets/work-2.png" alt="work-2">
+          </div>
+            <div class="layer">
+              <h3>Analog Clock App</h3>
+              <p>
+                This is a simple digital clock app that can be used to display the current date and time.
+              </p>
+              <a href="https://github.com/addyraza/Analog-Clock"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+        <div class="projects-card">
+          <div class="projects-card-image">
+            <img src="/assets/work-3.png" alt="work-3">
+          </div>
+            <div class="layer">
+              <h3>Meme Generator App</h3>
+              <p>
+                Meme generator is a project which is running by local host. It fetches a meme api and generate any random memes by API 
+              </p>
+              <a href="https://github.com/addyraza/Meme-Generator"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+      </div>
+      <button class="btn btn-2" style="margin-left: 50%;"><a href="https://github.com/addyraza">See More</a></button>
+    </section>
+
+<!-- -------------------------------Contact Form-------------------------------- -->
+
+    <section class="contact" id="contact">
+      <h1 style="color: blueviolet; font-size: 3rem; margin-left: 6rem; margin-top: 2rem;">Contact Me</h1>
+      <div class="container">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <a href="https://shadabraza9058@gmail.com"><i class="bx bxl-gmail"></i><p>shadabraza9058@gmail.com</p></a>
+            <a href="+91-9058522541"><i class='bx bxs-phone'></i><p>+91-9058522541</p></a>
+            <a href="https://www.linkedin.com/in/shadab-raza-948551220/"><i class="bx bxl-linkedin"></i><p>shadab-raza-948551220</p></a>
+          </div>
+          <div class="social-media">
+            <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/home"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="bx bxl-instagram-alt"></i></a>
+          </div>
+          <button class="btn"><a href="/assets/Shadab Resume3.pdf" download>Download CV</a></button>
+        </div>
+        <div class="contact-form">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Enter Your Name" required>
+            <input type="email" name="Email" placeholder="Enter Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </section>
+  
+<!-- ---------------------------footer------------------------ -->
+
+    <footer class="foot">
+      <p>Copyright @ Shadab Made with <i class='bx bxs-heart'></i> Easy Tutorials</p>
+    </footer>
+    <script src="/script.js"/>
   </body>
 </html>

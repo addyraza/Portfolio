@@ -13,11 +13,12 @@
 nav{
     width: 100%;
     height: 5rem;
-    background-color: rgba(52, 47, 120, 0.767);
+    background-color: rgb(52, 47, 120);
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
+    z-index: 100;
 }
 
 a{
@@ -27,13 +28,17 @@ a{
 
 a:hover{
     color: rgb(0, 195, 255);
-    box-shadow: 0 0 1rem var(--main-color);
 }
 
 nav li{
     list-style: none;
     display: inline-block;
     margin: 0 1.5rem;
+}
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
 }
 .left{
     font-size: 1.5rem;
@@ -50,11 +55,11 @@ nav li{
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 5rem;
+    top: 6rem;
 }
 .home-content{
     width: 50%;
-    margin: 9rem;
+    margin: 8rem;
     font-size: 1.5rem;
 }
 .home-image{
@@ -74,41 +79,278 @@ nav li{
         transform: translateY(0);
     }
 }
-span{
-    color: rgb(0, 195, 255);
-}
-/* .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
-    margin: 0.5rem;
-    margin-left: 0;
-    transition: .5s ease;
-} */
-
-.social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: transparent;
-    border: .2rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
+/* -----------------------------about------------------------ */
+.about{
+    width: 100%;
+    display: flex;
 }
 
-.social-media a:hover {
-    background-color: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+.about-image{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.img{
+    width: 20rem;
+    height: 25rem;
+    border-radius: 2rem;
+    margin: 5rem;
+}
+
+.about-content{
+    width: 50%;
+    margin-top: 8rem;
+    margin-right: 6rem;
+}
+.about .about-me{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.tab-title{
+    display: flex;
+    margin: 1rem 0 2rem;
+}
+
+.tab-links{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background : #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s ease;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 1.5rem;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ------------------------------------project-------------------------------- */
+
+.projects-container{
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.projects-card{
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+img{
+    width: 25rem;
+    height: 30rem;
+    border-radius: 1rem;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.249), #ff0051);
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 0.8rem;
+    transition: height 0.5s !important;
+}
+
+.layer h3{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.projects-card img:hover{
+    transform: scale(1.1);
+}
+
+.projects-card:hover .layer{
+    height: 100%;
+}
+
+.layer a i{
+    font-size: 4rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+.btn-2{
+    margin-left: 30%;
+}
+
+/* --------------------------------contacts-------------------------------- */
+
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.contact-info{
+    width: 30%;
+    margin-left: 8%;
+    margin-right: 10%;
+}
+
+.contact-info .contact-info-item{
+    margin-bottom: 2rem;
+}
+
+.contact-info .contact-info-item i{
+    font-size: 2rem;
+    color: #ff0051;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.social-media i{
+    display: inline-block;
+    font-size: 2rem;
+    color: #ff0051;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+
+.social-media i:hover{
+    color: aqua;
+    background-color: transparent;
+    transform: translateY(-5px);
+}
+
+.btn{
+    width: 8rem; 
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: brown; 
+    color: white; 
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: rgb(255, 255, 255);
+    color: #ff004f;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+#msg{
+    color: #61b757;
+    margin-top: 10px;
+    display: block;
+}
+
+/* --------------------------footer------------------------ */
+
+.foot{
+    width: 100%;
+    padding: 25px 0;
+    margin-top: 20px;
+    background-color: rgba(52, 47, 120, 0.767);
+    text-align: center;
+    font-weight: 300;
+}
+
+.foot p i{
+    color: #ff0051;
+}
+
+/* ------------------------for responsive------------------------ */
+
+@media screen and (max-width: 768px){
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+    }
+    .right ul li{
+        display: none;
+    }
+    .home{
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+    .about{
+        flex-direction: column;
+        margin: auto;
+    }
+    .about-content{
+        margin: auto;
+    }
+    .projects-container{
+        flex-direction: column;
+        margin: auto;
+
+    }
+    .projects-card{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .container{
+        flex-direction: column;
+        margin: auto;
+    }
 }
