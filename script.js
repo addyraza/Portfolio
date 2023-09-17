@@ -14,7 +14,7 @@ function opentab(info){
    document.getElementById(info).classList.add('active-tab');
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxWuKjrwgmJuYGhb1nWqUPjw8Q8lwcP5rQt_hZJ5GTBqF8XXVYpJexrQwN7VjWXkh59uw/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwixHO6PDkZVjJk--7c5xaAYof1GMmKPYVsW5BGlmgtfLE_ivAdUrBvdnGdp04F6Qr7/exec'
   const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById('msg')
 
